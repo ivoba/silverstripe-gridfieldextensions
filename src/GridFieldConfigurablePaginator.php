@@ -294,31 +294,31 @@ class GridFieldConfigurablePaginator extends GridFieldPaginator
             'first' => array(
                 'title' => 'First',
                 'args' => array('first-shown' => 1),
-                'extra-class' => 'ss-gridfield-firstpage',
+                'extra-class' => 'ss-gridfield-pagination-action ss-gridfield-firstpage',
                 'disable-previous' => ($this->getCurrentPage() == 1)
             ),
             'prev' => array(
                 'title' => 'Previous',
                 'args' => array('first-shown' => $arguments['first-shown'] - $this->getItemsPerPage()),
-                'extra-class' => 'ss-gridfield-previouspage',
+                'extra-class' => 'ss-gridfield-pagination-action ss-gridfield-previouspage',
                 'disable-previous' => ($this->getCurrentPage() == 1)
             ),
             'next' => array(
                 'title' => 'Next',
                 'args' => array('first-shown' => $arguments['first-shown'] + $this->getItemsPerPage()),
-                'extra-class' => 'ss-gridfield-nextpage',
+                'extra-class' => 'ss-gridfield-pagination-action ss-gridfield-nextpage',
                 'disable-next' => ($this->getCurrentPage() == $arguments['total-pages'])
             ),
             'last' => array(
                 'title' => 'Last',
                 'args' => array('first-shown' => ($this->getTotalPages() - 1) * $this->getItemsPerPage() + 1),
-                'extra-class' => 'ss-gridfield-lastpage',
+                'extra-class' => 'ss-gridfield-pagination-action ss-gridfield-lastpage',
                 'disable-next' => ($this->getCurrentPage() == $arguments['total-pages'])
             ),
             'pagesize' => array(
                 'title' => 'Page Size',
                 'args' => array('first-shown' => $arguments['first-shown']),
-                'extra-class' => 'ss-gridfield-pagesize-submit'
+                'extra-class' => 'ss-gridfield-pagination-action ss-gridfield-pagesize-submit'
             ),
         );
 
